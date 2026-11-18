@@ -93,7 +93,7 @@ double x = 0;
 double *d = &x;
 std::cout << reinterpret_cast<size_t>(d + 4) - reinterpret_cast<size_t>(d - 4) << std::endl;
 ```
-
+![картинка](06.png)
 ### Задание 7 **(2)**
 
 *Объясните работу следующей программы. Как изменится
