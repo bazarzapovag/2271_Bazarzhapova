@@ -12,8 +12,8 @@ int main() {
     int &ref = b;
     ref = 5;
 
-    std::cout << "umnozh = " << mul << std::endl;
-    std::cout << "pobit = " << bitAnd << std::endl;
+    std::cout << "umnozh = " << umnozh << std::endl;
+    std::cout << "pobit = " << pobit << std::endl;
     std::cout << "a = " << a << std::endl;
     std::cout << "b = " << b << std::endl;
     std::cout << "*p = " << *p << std::endl;
