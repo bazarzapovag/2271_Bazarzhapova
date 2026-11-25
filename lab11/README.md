@@ -18,6 +18,19 @@ int main() {
     return 0;
 }
 ```
+```
+int bar(int);
+int foo(int x) {
+    return bar(x);
+}
+int bar(int x) {
+    return x+1;
+}
+int main() {
+    foo(0);
+    return 0;
+}
+```
 ![rfhnbyrf](01.png)
 ### Задание 2 **(1)**
 
@@ -54,6 +67,55 @@ void dosome_2(std::vector<int> &V);
 void dosome_3(const std::vector<int> V);
 void dosome_4(std::vector<int> V);
 ```
+![rfhnbyrf](03_1.png)
+![rfhnbyrf](03_2.png)
+```
+#include <iostream>
+#include <vector>
+
+void dosome_1(const std::vector<int> &V){
+	int s = 0;
+	for (auto x: V){
+		s+=x;	
+    }
+    std::cout << "sum = " << s << std::endl;
+}
+void dosome_2(std::vector<int> &V){
+	int s = 0;
+	for (auto x: V){
+		s+=x;	
+    }
+    V[0]= -1;
+    std::cout << "sum = " << s << std::endl;
+}
+void dosome_3(const std::vector<int> V){
+	int s = 0;
+	for (auto x: V){
+		s+=x;	
+    }
+    std::cout << "sum = " << s << std::endl;
+}
+void dosome_4(std::vector<int> V){
+	int s = 0;
+	for (auto x: V){
+		s+=x;	
+    }
+    V[0]= -1;
+    std::cout << "sum = " << s << std::endl;
+}
+
+int main () {
+     std::vector<int> V = {1,2,3,4,5};
+    dosome_1(V);
+    dosome_2(V);
+    std::cout << "V[0] = " << V[0] << std::endl;
+    V = {1,2,3,4,5};
+    dosome_3(V);
+    dosome_4(V);
+    std::cout << "V[0] = " << V[0] << std::endl;
+    return 0;
+}
+```
 *Напишите примеры для этих функций. В качестве примера можно взять нахождение суммы всех элементов
 вектора.*
 
@@ -63,7 +125,7 @@ void dosome_4(std::vector<int> V);
 ```
 dosome({1, 2, 3});
 ```
-
+![rfhnbyrf](03_3.png)
 
 
 ### Задание 4 **(2)**
